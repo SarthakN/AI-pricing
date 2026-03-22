@@ -2,8 +2,6 @@
 
 AI products use a mix of traditional SaaS pricing and newer usage/value-based models. The right model usually depends on **how directly the product creates measurable value** and **how predictable usage is**.
 
----
-
 ## 1. Usage-Based Pricing (Most Common in AI)
 **You pay for what you consume**
 
