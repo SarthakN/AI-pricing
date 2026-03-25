@@ -1,0 +1,42 @@
+AI Pricing in India: The Real Product Is Not the Model, It Is the Meter
+
+The most important mistake people make when thinking about LLM pricing is assuming the question is technical. It is not. It is economic.
+
+Tokens are a billing unit, not a business model. They are what you charge when you still think the customer is buying compute. But customers are not buying compute. They are buying outcomes: fewer support tickets, faster hiring, better lead qualification, lower compliance cost, more content, less grunt work. The further you move from the infrastructure layer and the closer you move to the business layer, the less sensible token pricing becomes.
+
+That matters everywhere, but it matters especially in India.
+
+India is an interesting market for AI because it compresses two forces that often exist separately elsewhere. On one hand, there is enormous cost pressure. Buyers are disciplined, procurement is real, and software is expected to justify itself quickly. On the other hand, the country has massive labor-intensive industries — support, BPO, recruitment, finance ops, healthcare ops, retail ops — where AI can be framed not as a novelty but as a direct replacement for human throughput.
+
+That combination changes the pricing conversation. In the U.S., many AI products can hide behind experimentation and abundance. In India, the buyer wants a number that maps to a business case.
+
+That is why the best pricing model depends less on the model itself and more on the identity of the buyer.
+
+For infrastructure buyers — CTOs, platform heads, engineering leaders — token pricing still makes sense. These are people who understand variable cost, are comfortable with metering, and can absorb volatility into a broader systems budget. In IT services and developer tooling, the product is often closest to the model. A coding assistant, an internal copilot, an API wrapper: these are still compute-first businesses. The customer knows they are buying access to intelligence in a probabilistic form, so paying per token is economically legible.
+
+But move one layer up the stack and the logic changes.
+
+A head of customer support does not care how many tokens an AI agent consumed. They care how many tickets were resolved, how much average handle time came down, and whether containment improved. A recruiting leader does not care how many prompt tokens were used to generate candidate outreach. They care whether qualified candidates increased and time-to-fill dropped. A bank operations head does not care about the token footprint of a claims processor. They care about cost per claim, turnaround time, and error rate.
+
+This is why per-output, per-case, and outcome-based pricing are so powerful in AI. They convert an abstract system into a business promise.
+
+In India, that promise matters even more because budget holders are often skeptical of technology that cannot be tied to a clear workflow. The most successful AI product will not be the one that exposes the most elegant meter. It will be the one that hides the model entirely and sells a business noun: a ticket resolved, a resume screened, a document processed, a call handled, a lead qualified.
+
+That also explains why hybrid pricing is likely to dominate the next phase. Pure usage pricing is elegant, but it is psychologically difficult for mainstream business buyers. Pure subscription pricing is comforting, but it often leaves value on the table when usage scales hard. The compromise is subscription plus included usage, with overages or credits beyond that. It creates predictability for procurement and preserves monetization for heavy users.
+
+This is especially true in India’s enterprise market, where buyers want both control and clarity. They do not want surprise bills. They also do not want to pay enterprise software prices for experimental functionality. The model that wins is the one that makes the value visible while keeping the cost bounded.
+
+There is a deeper strategic point here. AI pricing is not just a reflection of usage. It is a signal about where a product sits in the stack.
+
+Token pricing says: “We are infrastructure.”
+Seat-based pricing says: “We are software.”
+Per-output pricing says: “We are workflow automation.”
+Outcome-based pricing says: “We are a business system.”
+
+That progression matters because it tells you where margin power eventually accrues. The companies that stay trapped at the token layer are likely to look more like utilities. The companies that move up into outcome pricing are the ones that can capture the real economic surplus.
+
+In India, that surplus is large. Labor replacement is expensive. Operational friction is expensive. Compliance mistakes are expensive. A product that can reliably reduce those costs should not be priced like an API call. It should be priced like a business asset.
+
+So the rule is simple. Sell tokens to builders. Sell seats to teams. Sell outputs to operators. Sell outcomes to executives.
+
+The future of AI pricing is not lower-level metering. It is higher-level abstraction. The winner will not be the company that best measures intelligence. It will be the one that best measures value.
