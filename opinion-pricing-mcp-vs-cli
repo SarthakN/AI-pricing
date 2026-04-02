@@ -1,0 +1,144 @@
+Cost and pricing: MCP vs CLI
+
+The biggest cost in most AI systems isn’t infrastructure—it’s tokens. Every request you send to a model (input + output) costs money, and that adds up fast. Engineering time is the other major factor, but usually secondary.
+
+MCP cost model
+High upfront token cost
+
+MCP works by loading tool schemas into the model’s context. That sounds neat, but it’s expensive.
+
+In practice, this can take anywhere from ~20k to 150k+ tokens per session. In some setups, most of the context window is already used before the user even does anything.
+
+So you’re paying a significant amount just to describe what tools exist.
+
+Costs grow quickly in agent loops
+
+Most AI agents follow a loop like:
+
+plan → call tool → observe → repeat
+
+With MCP, every step carries structured messages and tool definitions along with it. As the workflow gets longer, the context grows, and each step becomes more expensive than the last.
+
+This is where costs can really spiral.
+
+Where MCP saves money
+
+MCP can still make sense at scale.
+
+Because everything is structured:
+
+integrations are more standardized
+parsing errors are reduced
+tools are easier to reuse across teams
+
+So while token costs are higher, engineering effort can go down over time.
+
+Inefficiency in practice
+
+A common issue: systems load a lot of tools that never get used.
+
+For example, you might expose 50–100 tools, but only a handful are actually called. The rest still sit in the context, consuming tokens for no reason.
+
+That’s wasted spend.
+
+CLI cost model
+Much lower token usage
+
+CLI-based approaches are lean. You’re typically sending:
+
+a command
+maybe some context
+and then reading the output
+
+This usually stays in the range of a few hundred to a few thousand tokens per step, which is significantly cheaper than MCP-heavy setups.
+
+In many cases, this leads to 10x+ savings.
+
+More efficient in loops
+
+In the same agent loop:
+
+plan → run command → read output → repeat
+
+you’re only passing what’s needed each time. There’s no schema overhead being dragged along.
+
+Costs scale more predictably and stay relatively low.
+
+Better use of tokens
+
+With CLI, tokens are mostly spent on:
+
+actual reasoning
+actual outputs
+
+not on describing tools or formats.
+
+So you get more value per token.
+
+Where CLI becomes expensive
+
+The tradeoff shows up in engineering effort.
+
+You’ll likely need to:
+
+parse unstructured outputs
+write glue code between tools
+handle edge cases and failures manually
+
+This takes time and adds maintenance overhead.
+
+Safety and infra costs
+
+Letting an AI run commands directly isn’t safe by default.
+
+You’ll need:
+
+sandboxing
+permission controls
+monitoring
+
+That adds extra engineering and infrastructure work.
+
+Side-by-side summary
+Token costs
+MCP: high upfront cost, grows quickly with longer workflows
+CLI: low overhead, scales more predictably
+
+In many real setups, CLI can reduce token spend by 60–90%.
+
+Engineering costs
+MCP: more effort upfront, easier to maintain later
+CLI: quick to start, but can get messy over time
+Infra and operations
+MCP: more structured, easier to secure and standardize
+CLI: more flexible, but you have to build safety and reliability yourself
+The tradeoff
+MCP: higher token costs, lower engineering cost at scale
+CLI: lower token costs, higher engineering and safety overhead
+Why many startups prefer CLI
+
+Early-stage teams usually care about:
+
+reducing API spend
+moving quickly
+
+So they optimize for lower token usage, even if it means more manual engineering.
+
+That’s why CLI-heavy approaches are common in prototypes and early products. MCP tends to come in later, if and when things need to scale.
+
+What most teams end up doing
+
+A mix of both:
+
+CLI for execution (cheap, flexible)
+MCP or similar structure for:
+external APIs
+sensitive operations
+shared systems across teams
+Bottom line
+
+MCP is better when you’re optimizing for long-term structure and team scalability.
+
+CLI is better when you’re trying to keep costs down and move fast.
+
+Right now, since token costs are still a major constraint, a lot of teams are leaning toward CLI-first approaches.
