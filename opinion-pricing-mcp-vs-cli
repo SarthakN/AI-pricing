@@ -2,7 +2,7 @@ Cost and pricing: MCP vs CLI
 
 The biggest cost in most AI systems isn’t infrastructure—it’s tokens. Every request you send to a model (input + output) costs money, and that adds up fast. Engineering time is the other major factor, but usually secondary.
 
-MCP cost model
+MCP cost model:
 High upfront token cost
 
 MCP works by loading tool schemas into the model’s context. That sounds neat, but it’s expensive.
@@ -41,7 +41,7 @@ For example, you might expose 50–100 tools, but only a handful are actually ca
 
 That’s wasted spend.
 
-CLI cost model
+CLI cost model:
 Much lower token usage
 
 CLI-based approaches are lean. You’re typically sending:
